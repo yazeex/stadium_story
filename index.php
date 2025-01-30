@@ -386,9 +386,15 @@
                 {
                     image.addEventListener("click", () => 
                     {
-                        const name = image.getAttribute("data-name");
-                        const description = image.getAttribute("data-description");
+                        const name = image.getAttribute("data-name") || "Unknown Stadium";
+                        const description = image.getAttribute("data-description") || "No description available.";
                         const imageUrl = image.getAttribute("data-image");
+
+                        if (!imageUrl) {
+                            console.error("Image URL is missing for", name);
+                            return;
+                        }
+
                         openModal(name, description, imageUrl);
                     });
                 });

@@ -6,12 +6,12 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    position: fixed; /* Make the header fixed at the top */
-    top: 0; /* Position it at the top of the page */
-    left: 0; /* Align to the left edge */
-    right: 0; /* Align to the right edge */
-    z-index: 9999; /* Ensure it's above other content */
-    width: 100%; /* Take up full width */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
 }
 
 header .logo img {
@@ -42,24 +42,22 @@ nav ul li a:hover {
     transition: color 0.3s ease;
 }
 
-/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 10px;
-    background-color: #f8f9fa; /* Softer background color */
+    background-color: #f8f9fa;
     color: #333;
-    margin-top: 80px; /* Avoid content being hidden behind the fixed header */
-    line-height: 1.6; /* Improve readability */
+    margin-top: 80px;
+    line-height: 1.6;
 }
 
-/* Hero Section */
 .hero {
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(to bottom, #7dbcc7, #445c6d); /* Softer gradient */
+    background: linear-gradient(to bottom, #7dbcc7, #445c6d);
     color: #fff;
-    border-radius: 10px; /* Rounded edges */
+    border-radius: 10px;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -83,7 +81,7 @@ body {
 
 .hero ol,
 #contact ul {
-    list-style: inside; /* Ensures markers (numbers or bullets) are inside the container */
+    list-style: inside;
     padding: 0;
     margin: 0 auto;
     max-width: 600px;
@@ -95,7 +93,7 @@ body {
 }
 
 .hero ol {
-    list-style-type: decimal; /* Ensures ordered list displays numbers */
+    list-style-type: decimal;
 }
 
 .hero ol li {
@@ -104,42 +102,80 @@ body {
     color: #555;
 }
 
-#contact ul {
-    list-style-type: disc; /* Ensures unordered list displays bullets */
-}
-
-#contact ul li {
-    margin-bottom: 10px;
-    font-size: 1em;
-    color: #555;
-}
-
-
-/* Contact Section */
+/* Updated Contact Section Styles */
 #contact {
-    background: #f8f9fa;
     padding: 40px 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #contact h2 {
+    color: #1B8536;
+    text-align: center;
+    margin-bottom: 30px;
     font-size: 2.2em;
-    margin-bottom: 20px;
-    color: #25552e;
 }
 
-#contact h1 {
-    font-size: 1.5em;
+.contact-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-width: 300px;
+    text-align: center;
+}
+
+.contact-card h3 {
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
 }
 
+.social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
 
+.social-link {
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
 
+.social-link:hover {
+    transform: scale(1.1);
+}
 
+.dot {
+    color: #ccc;
+    margin: 0 5px;
+}
 
+/* Social Media Icon Colors */
+.fa-facebook { color: #0866FF; }
+.fa-snapchat { color: #000000; }
+.fa-instagram { color: #E4405F; }
+.fa-youtube { color: #FF0000; }
+.fa-linkedin { color: #0A66C2; }
+.fa-twitter { color: #1DA1F2; }
 
-
+@media (max-width: 1200px) {
+    .contact-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-card {
+        width: 100%;
+        max-width: 500px;
+    }
+}
